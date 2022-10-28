@@ -50,12 +50,12 @@ public class Post {
 	}
 
 	public static void createPost(Scanner scanner) {
-		System.out.println("Skriv in titeln: ");
+		System.out.println("Enter the title: ");
 		Post post = new Post();
 		String title = scanner.next();
 		post.setTitle(title);
 		scanner = new Scanner(System.in);
-		System.out.println("Skriv in beskrivning: ");
+		System.out.println("Enter description: ");
 		String description = scanner.nextLine();
 		post.setDescription(description);
 		post.setEntryDate(Instant.now().truncatedTo(ChronoUnit.MINUTES));
@@ -77,13 +77,13 @@ public class Post {
 	}
 
 	public static void readPosts(Scanner scanner) {
-		System.out.println("Här är dina inlägg:" + "\n");
+		System.out.println("Here are your posts:" + "\n");
 		configureObjectMapper();
 		List<Post> posts = readPostsFromFiles();
 		for (Post post : posts) {
 			System.out.println(post.getTitle() + " " + post.getEntryDate() + "\n" + post.getDescription() + "\n" + "\n");
 		}
-		System.out.println("1: Gå till main menu");
+		System.out.println("1: Go to the main menu");
 		if (1 == scanner.nextInt()) {
 			Main.goToMainMenu();
 		}

@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("Välkommen till dagboken du kommer nu få tre alternativ med vad du kan göra i din dagbok");
+		System.out.println("Welcome to the diary you will now have three options with what you can do in your diary");
 
 		goToMainMenu();
 	}
 
 	public static void goToMainMenu() {
-		System.out.println("1: Skapa ett nytt inlägg");
-		System.out.println("2: Visa inlägg");
-		System.out.println("3: Avsluta programmet");
+		System.out.println("1: Create a new post");
+		System.out.println("2: Show posts");
+		System.out.println("3: Exit the program");
 
 		Scanner scanner = new Scanner(System.in);
 
@@ -27,7 +27,7 @@ public class Main {
 	}
 
 	private static void shutDown() {
-		System.out.println("Hejdå");
+		System.out.println("Good bye");
 		System.exit(0);
 	}
 }
